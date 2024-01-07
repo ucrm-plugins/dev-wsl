@@ -89,3 +89,13 @@ Instructions and scripts for setting up our development environment in WSL.
     mkdir -p ~/ucrm-plugins && cd ~/ucrm-plugins && \
     gh repo clone ucrm-plugins/monorepo -- --recurse-submodules
     ```
+
+
+
+
+
+Updates
+```bash
+sudo curl -fsSL https://github.com/ucrm-plugins/dev-wsl/raw/main/bin/uisp_inst.sh > /tmp/uisp_inst.sh \
+&& sudo bash /tmp/uisp_inst.sh --version 2.4.60 --update
+```

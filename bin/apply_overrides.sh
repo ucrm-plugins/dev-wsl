@@ -1,8 +1,8 @@
 #!/bin/bash
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
 set -e
 
-SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 SOURCE_DIR=$SCRIPT_DIR/..
 
 cd /home/unms/app
@@ -14,7 +14,6 @@ UCRM_VERSION=$(sed -nE 's|^\s*image:\s*ubnt/unms-crm:(.*)|\1|p' docker-compose.y
 # OVERRIDES
 ########################################################################################################################
 
-#if [ ! -d /home/unms/app/overrides ]
 if [ ! -d overrides ]
 then
     ln -s $SOURCE_DIR/app/overrides overrides
