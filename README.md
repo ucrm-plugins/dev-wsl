@@ -57,7 +57,7 @@ Instructions and scripts for setting up our development environment in WSL.
     sudo apt-get install -y ca-certificates apt-transport-https software-properties-common
     sudo add-apt-repository -y ppa:ondrej/php
     sudo apt-get update
-    sudo apt install -y php8.1-cli php8.1-curl php8.1-xml php8.1-zip unzip
+    sudo apt install -y php8.1-cli php8.1-curl php8.1-xml php8.1-yaml php8.1-zip unzip
 
     # Composer (Latest)
     sudo curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
