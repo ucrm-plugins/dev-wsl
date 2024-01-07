@@ -45,7 +45,12 @@ Instructions and scripts for setting up our development environment in WSL.
     --ssl-cert-key uisp.key
     ```
 
-5.  Tooling
+5.  Users
+    ```bash
+    sudo chmod 775 -R /home/unms/
+    ```
+
+6.  Tooling
     ```bash
     # PHP 8.1
     sudo apt-get update
@@ -65,7 +70,7 @@ Instructions and scripts for setting up our development environment in WSL.
 
     composer global require --dev squizlabs/php_codesniffer
     ```
-6.  GitHub CLI
+7.  GitHub CLI
     ```bash
     curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
     && sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
@@ -74,4 +79,13 @@ Instructions and scripts for setting up our development environment in WSL.
     && sudo apt install gh -y
 
     echo "export GH_TOKEN=<GitHub Token>" >> ~/.profile
+    ```
+
+8.  Repos
+    ```bash
+    mkdir -p ~/spaethtech && cd ~/spaethtech && \
+    gh repo clone spaethtech/php-monorepo -- --recurse-submodules
+
+    mkdir -p ~/ucrm-plugins && cd ~/ucrm-plugins && \
+    gh repo clone ucrm-plugins/monorepo -- --recurse-submodules
     ```
