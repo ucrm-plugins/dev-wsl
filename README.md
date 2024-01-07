@@ -62,8 +62,8 @@ Instructions and scripts for setting up our development environment in WSL.
     # Composer (Latest)
     sudo curl -sS https://getcomposer.org/installer -o /tmp/composer-setup.php
     sudo php /tmp/composer-setup.php --install-dir=/usr/local/bin --filename=composer
-    echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> $HOME/.profile
-    source $HOME/.profile
+    echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
+    source ~/.bashrc
 
     # PHP CS Fixer
     composer global require --dev friendsofphp/php-cs-fixer
@@ -78,7 +78,8 @@ Instructions and scripts for setting up our development environment in WSL.
     && sudo apt update \
     && sudo apt install gh -y
 
-    echo "export GH_TOKEN=<GitHub Token>" >> ~/.profile
+    echo "export GH_TOKEN=<GitHub Token>" >> ~/.bashrc
+    source ~/.bashrc
     ```
 
 8.  Repos
