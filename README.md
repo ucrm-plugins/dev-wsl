@@ -66,10 +66,10 @@ Instructions and scripts for setting up our development environment in WSL.
     echo 'export PATH="$PATH:$HOME/.config/composer/vendor/bin"' >> ~/.bashrc
     source ~/.bashrc
 
-    # PHP CS Fixer
+    # Composer Tools
     composer global require --dev friendsofphp/php-cs-fixer
-
     composer global require --dev squizlabs/php_codesniffer
+    composer global require --dev consolidation/robo
     ```
 7.  GitHub CLI
     ```bash
