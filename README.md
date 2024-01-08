@@ -43,11 +43,12 @@ Instructions and scripts for setting up our development environment in WSL.
     --ssl-cert-dir /etc/ssl/certs \
     --ssl-cert uisp.crt \
     --ssl-cert-key uisp.key
+    --version 2.4.61
     ```
 
 5.  Users
     ```bash
-    sudo chmod 775 -R /home/unms/
+    sudo chmod 777 -R /home/unms/
     ```
 
 6.  Tooling
